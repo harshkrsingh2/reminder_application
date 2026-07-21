@@ -21,6 +21,10 @@ def hangman():
             if user_letter in word_letters:
                 word_letters.remove(user_letter)
                 print('')
+                return True
+            if user_letter in word_letters:
+                word_letters.remove(user_letter)
+                print('')
             else:
                 lives -= 1
                 print('\nYour letter,', user_letter, 'is not in the word.')
